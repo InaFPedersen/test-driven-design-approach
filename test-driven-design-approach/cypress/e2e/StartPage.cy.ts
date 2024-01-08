@@ -9,10 +9,13 @@ describe("start page should have", () => {
         cy.get("img").should("exist");
     });
     it("have a paragraph", () => {
-        cy.get("p").should("have.text", "Edit src/App.tsx and save to reload.");
+        cy.get("p").should("have.text", "Lorum ipsum");
     });
-    it("have a link text", () => {
-        cy.get("a").should("have.text", "Learn React");
-        cy.get("a").click();
+    it("have a link text that can be clicked", () => {
+        cy.get("[data-cy='learn-react-link']").should(
+            "have.text",
+            "Learn React"
+        );
+        cy.get("[data-cy='learn-react-link']").click();
     });
 });
