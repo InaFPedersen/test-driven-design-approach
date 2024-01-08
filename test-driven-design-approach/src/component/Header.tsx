@@ -16,7 +16,7 @@ const Header = () => {
                 margin: "10px",
             }}
         >
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
                 <div style={{ display: "flex", flexDirection: "row" }}>
                     <img
                         src={logo}
@@ -31,11 +31,11 @@ const Header = () => {
             </Navbar.Brand>
 
             <Nav>
-                <Nav.Link href="#home" data-cy="home-tab">
+                <Nav.Link href="/" data-cy="home-tab">
                     Home
                 </Nav.Link>
                 <Nav.Link
-                    href="#about"
+                    href="/about"
                     data-cy="about-tab"
                     style={{
                         marginLeft: "40px",
@@ -44,7 +44,7 @@ const Header = () => {
                     About
                 </Nav.Link>
                 <Nav.Link
-                    href="#application"
+                    href="/application"
                     data-cy="application-tab"
                     style={{
                         marginLeft: "40px",
