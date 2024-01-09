@@ -7,8 +7,12 @@ describe("start page should have", () => {
         cy.get("h2").should("have.text", "Application");
     });
     it("has a form with input fields", () => {
+        cy.get("[data-cy='form-container']").should("exist");
+        cy.get("[data-cy='label-name-input']").should("exist");
         cy.get("[data-cy='name-input']").should("exist");
+        cy.get("[data-cy='label-age-input']").should("exist");
         cy.get("[data-cy='age-input']").should("exist");
+        cy.get("[data-cy='label-description-input']").should("exist");
         cy.get("[data-cy='description-input']").should("exist");
     });
     it("has a save button", () => {

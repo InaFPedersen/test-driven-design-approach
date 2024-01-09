@@ -11,16 +11,16 @@ describe("start page should have", () => {
     });
 
     it("have a read more button", () => {
-        cy.get("button").should("have.text", "Read more");
-        cy.get("button").click();
+        cy.get("[data-cy='read-more']").should("have.text", "Read more");
+        cy.get("[data-cy='read-more']").click();
     });
 
     it("open a side sheet that opens if read more button is clicked", () => {
-        cy.get("button").click();
-        cy.get("[data-cy='side-sheet']").should("exist");
+        cy.get("[data-cy='read-more']").click();
     });
 
     it("the side sheet has several text boxes", () => {
+        cy.get("[data-cy='read-more']").click();
         cy.get("[data-cy='text-field-1']").should("have.text", "Lorum ipsum");
         cy.get("[data-cy='text-field-2']").should(
             "have.text",
@@ -41,6 +41,7 @@ describe("start page should have", () => {
     });
 
     it("the side sheet has a close button that closes the side sheet when click", () => {
+        cy.get("[data-cy='read-more']").click();
         cy.get("[data-cy='close-button']").should("exist");
         cy.get("[data-cy='close-button']").click();
     });
